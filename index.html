@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAVEEN | Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            position: relative;
+        }
+        
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: #ffffff !important;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #0d6efd !important;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: #495057 !important;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #0d6efd !important;
+        }
+
+        /* Hero Section */
+        #home {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        }
+        .hero-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border: 8px solid white;
+            object-fit: cover;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #212529;
+        }
+        .section-title span {
+            color: #0d6efd;
+        }
+
+        /* Timeline CSS */
+        .timeline {
+            border-left: 3px solid #0d6efd;
+            padding-left: 20px;
+            margin-left: 10px;
+            position: relative;
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-icon {
+            position: absolute;
+            left: -32px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            border: 4px solid #fff;
+            box-shadow: 0 0 0 2px #0d6efd;
+        }
+        .timeline-date {
+            font-size: 0.9rem;
+            color: #0d6efd;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        /* Cards Hover Effect */
+        .project-card, .cert-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .project-card:hover, .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Skills Badges */
+        .skill-badge {
+            font-size: 0.9rem;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: #fff;
+        }
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+    <!-- Navbar Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">PRAVEEN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0 px-4 rounded-pill">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <!-- Text Content -->
+                <div class="col-md-7 text-center text-md-start mt-5 mt-md-0">
+                    <h5 class="text-primary fw-bold mb-3">HELLO, I AM</h5>
+                    <h1 class="display-3 fw-bold mb-3 text-dark">PRAVEEN</h1>
+                    <h3 class="h4 text-secondary mb-4">Aspiring Assistant Professor in Computer Science</h3>
+                    <p class="lead text-muted mb-5">
+                        Master of Computer Applications (MCA) graduate, passionate about teaching, and a technology enthusiast. UGC NET (Dec 2025) qualified with a strong score of 114/300.
+                    </p>
+                    <div>
+                        <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 me-3 mb-3"><i class="fas fa-envelope me-2"></i>Hire Me</a>
+                        <a href="https://github.com/Praveen152025" target="_blank" class="btn btn-dark btn-lg rounded-pill px-5 mb-3"><i class="fab fa-github me-2"></i>GitHub</a>
+                    </div>
+                </div>
+                <!-- Profile Image -->
+                <div class="col-md-5 text-center">
+                    <!-- Yaha par profile.png aapki photo ka naam hona chahiye -->
+                    <img src="profile.png" alt="Praveen's Photo" class="hero-img img-fluid" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <div class="card border-0 bg-light p-4 rounded-4 shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary fw-bold mb-3"><i class="fas fa-bullseye me-2"></i>Career Objective</h4>
+                            <p class="card-text text-muted fs-5 leading-lg">
+                                To secure an Assistant Professor position in Computer Science, using my recent MCA degree, passion for teaching, and academic knowledge to deliver high-quality education and help the institution grow.
+                            </p>
+                            <div class="alert alert-warning border-start border-warning border-5 mt-4" role="alert">
+                                <h5 class="alert-heading fw-bold"><i class="fas fa-trophy text-warning me-2"></i>Key Achievement</h5>
+                                <p class="mb-0 text-dark">UGC NET (Computer Science) - Dec 2025 Score: <strong>114/300</strong>. Currently preparing for the June 2026 exam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0 bg-light p-4 rounded-4 shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title text-dark fw-bold mb-4"><i class="fas fa-user me-2 text-primary"></i>Personal Details</h4>
+                            <ul class="list-group list-group-flush bg-transparent">
+                                <li class="list-group-item bg-transparent border-bottom d-flex pb-3 pt-3">
+                                    <strong class="w-50 text-muted">Date of Birth:</strong> 
+                                    <span class="w-50 fw-medium">15/04/2005</span>
+                                </li>
+                                <li class="list-group-item bg-transparent border-bottom d-flex pb-3 pt-3">
+                                    <strong class="w-50 text-muted">Languages:</strong> 
+                                    <span class="w-50 fw-medium">English, Hindi, Marwadi</span>
+                                </li>
+                                <li class="list-group-item bg-transparent border-bottom d-flex pb-3 pt-3">
+                                    <strong class="w-50 text-muted">Email:</strong> 
+                                    <a href="mailto:it.praveen369@gmail.com" class="w-50 text-primary text-decoration-none fw-medium">it.praveen369@gmail.com</a>
+                                </li>
+                                <li class="list-group-item bg-transparent d-flex pt-3">
+                                    <strong class="w-50 text-muted">Phone:</strong> 
+                                    <span class="w-50 fw-medium">+91 8302749960</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title">Technical <span>Skills</span></h2>
+            
+            <div class="row g-4">
+                <!-- Core Subjects -->
+                <div class="col-md-6">
+                    <div class="card border-0 p-4 rounded-4 shadow-sm h-100 bg-white">
+                        <h4 class="fw-bold mb-4"><i class="fas fa-book-open text-primary me-2"></i>Core Academic Subjects</h4>
+                        
+                        <div class="mb-3">
+                            <label class="fw-medium mb-1">Artificial Intelligence & GenAI</label>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-primary" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="fw-medium mb-1">Data Structures</label>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="fw-medium mb-1">Object-Oriented Programming (OOP)</label>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-info" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="fw-medium mb-1">Machine Learning & Data Science</label>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-warning" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools and Tech Stack -->
+                <div class="col-md-6">
+                    <div class="card border-0 p-4 rounded-4 shadow-sm h-100 bg-white">
+                        <h4 class="fw-bold mb-4"><i class="fas fa-laptop-code text-primary me-2"></i>Technology Stack</h4>
+                        
+                        <div class="mb-4">
+                            <h6 class="text-muted fw-bold text-uppercase">Programming</h6>
+                            <span class="badge bg-primary skill-badge">Python</span>
+                            <span class="badge bg-secondary skill-badge">C / C++</span>
+                            <span class="badge bg-secondary skill-badge">Java</span>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="text-muted fw-bold text-uppercase">Web & Databases</h6>
+                            <span class="badge bg-success skill-badge">Flask</span>
+                            <span class="badge bg-info text-dark skill-badge">PHP</span>
+                            <span class="badge bg-dark skill-badge">HTML / CSS / JS</span>
+                            <span class="badge bg-secondary skill-badge">Bootstrap</span>
+                            <span class="badge border border-primary text-primary skill-badge">MySQL</span>
+                            <span class="badge border border-success text-success skill-badge">MongoDB</span>
+                        </div>
+
+                        <div>
+                            <h6 class="text-muted fw-bold text-uppercase">Tools & Soft Skills</h6>
+                            <span class="badge bg-light text-dark border skill-badge"><i class="fab fa-git-alt me-1"></i>Git & GitHub</span>
+                            <span class="badge bg-light text-dark border skill-badge"><i class="fas fa-code me-1"></i>VS Code</span>
+                            <span class="badge bg-warning text-dark skill-badge"><i class="fas fa-chalkboard-teacher me-1"></i>Mentoring</span>
+                            <span class="badge bg-warning text-dark skill-badge"><i class="fas fa-project-diagram me-1"></i>Presentations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="section-title">Education & <span>Experience</span></h2>
+            
+            <div class="row g-5">
+                <!-- Education Timeline -->
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4 text-dark"><i class="fas fa-graduation-cap text-primary me-2"></i>Education</h3>
+                    <div class="timeline">
+                        
+                        <div class="timeline-item bg-light p-4 rounded-4 shadow-sm">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-date">2024 - 2026</div>
+                            <h5 class="fw-bold">Master of Computer Applications (MCA)</h5>
+                            <p class="text-muted mb-0">Lachoo Memorial College of Science and Technology (Autonomous), Jodhpur</p>
+                        </div>
+
+                        <div class="timeline-item bg-light p-4 rounded-4 shadow-sm">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-date">2021 - 2024</div>
+                            <h5 class="fw-bold">Bachelor of Computer Applications (BCA)</h5>
+                            <p class="text-muted mb-1">Lucky Institute of Professional Studies, Jodhpur</p>
+                            <span class="badge bg-primary">Score: 82%</span>
+                        </div>
+
+                        <div class="timeline-item bg-light p-4 rounded-4 shadow-sm">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-date">2019 - 2021</div>
+                            <h5 class="fw-bold">Higher Secondary (Commerce with Computer)</h5>
+                            <p class="text-muted mb-1">Suncity Senior Secondary School, Soorsagar, Jodhpur (RBSE)</p>
+                            <span class="badge bg-primary">Score: 89.40%</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Internships Timeline -->
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4 text-dark"><i class="fas fa-briefcase text-primary me-2"></i>Internships</h3>
+                    <div class="timeline">
+                        
+                        <div class="timeline-item border border-primary p-4 rounded-4 shadow-sm" style="background-color: #f8fbff;">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-date">Nov 2025 – Apr 2026 (6 Months)</div>
+                            <h5 class="fw-bold">Python Programming Intern</h5>
+                            <h6 class="text-primary fw-bold mb-3">Ybi Foundation</h6>
+                            <ul class="text-muted mb-0 pl-3">
+                                <li>Managed daily technical tasks and developed hands-on Python projects.</li>
+                                <li>Showed strong problem-solving skills and a highly professional work ethic.</li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-item border border-primary p-4 rounded-4 shadow-sm" style="background-color: #f8fbff;">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-date">Jun 2025 – Jul 2025 (45 Days)</div>
+                            <h5 class="fw-bold">Python Programming Intern</h5>
+                            <h6 class="text-primary fw-bold mb-3">Ybi Foundation</h6>
+                            <ul class="text-muted mb-0 pl-3">
+                                <li>Learned and practically applied core Python programming concepts.</li>
+                                <li>Successfully finished daily project tasks and technical assignments.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title">My <span>Projects</span></h2>
+            
+            <div class="row g-4">
+                
+                <!-- Project 1 -->
+                <div class="col-md-6">
+                    <div class="card project-card h-100 p-2">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h4 class="card-title fw-bold text-dark">Employee Attendance System</h4>
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle">
+                                    <i class="fas fa-users-cog text-primary fs-4"></i>
+                                </div>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">Created a complete web application with a database to easily manage and track staff attendance efficiently.</p>
+                            <div class="mt-3 pt-3 border-top">
+                                <span class="badge bg-light text-dark border">Python</span>
+                                <span class="badge bg-light text-dark border">Flask</span>
+                                <span class="badge bg-light text-dark border">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6">
+                    <div class="card project-card h-100 p-2">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h4 class="card-title fw-bold text-dark">Live Weather Forecast App</h4>
+                                <div class="bg-warning bg-opacity-10 p-3 rounded-circle">
+                                    <i class="fas fa-cloud-sun text-warning fs-4"></i>
+                                </div>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">Built a website that uses the OpenWeather API to show real-time temperature, humidity, and wind details.</p>
+                            <div class="mt-3 pt-3 border-top">
+                                <span class="badge bg-light text-dark border">Flask</span>
+                                <span class="badge bg-light text-dark border">API Integration</span>
+                                <span class="badge bg-light text-dark border">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6">
+                    <div class="card project-card h-100 p-2">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h4 class="card-title fw-bold text-dark">"Aapki Recipes" Website</h4>
+                                <div class="bg-success bg-opacity-10 p-3 rounded-circle">
+                                    <i class="fas fa-utensils text-success fs-4"></i>
+                                </div>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">Designed a recipe sharing platform where users can read recipes and admins can easily add or edit them.</p>
+                            <div class="mt-3 pt-3 border-top">
+                                <span class="badge bg-light text-dark border">PHP</span>
+                                <span class="badge bg-light text-dark border">MySQL</span>
+                                <span class="badge bg-light text-dark border">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6">
+                    <div class="card project-card h-100 p-2">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h4 class="card-title fw-bold text-dark">Movies UI Platform</h4>
+                                <div class="bg-danger bg-opacity-10 p-3 rounded-circle">
+                                    <i class="fas fa-film text-danger fs-4"></i>
+                                </div>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">Made a beautiful, dark-themed website to display movies, complete with search options and sliding images.</p>
+                            <div class="mt-3 pt-3 border-top">
+                                <span class="badge bg-light text-dark border">HTML / CSS</span>
+                                <span class="badge bg-light text-dark border">JavaScript</span>
+                                <span class="badge bg-light text-dark border">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="alert alert-info border-0 shadow-sm mt-5 d-flex align-items-center rounded-4 p-4" role="alert">
+                <i class="fas fa-chalkboard-teacher fs-1 text-info me-4"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold mb-1">Academic Seminar</h5>
+                    <p class="mb-0 text-dark">Successfully presented a detailed report and slide presentation on <strong>Artificial Intelligence & AI Agents</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="section-title">My <span>Certifications</span></h2>
+            
+            <div class="row g-4">
+                <!-- Cert 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card cert-card bg-light border-0 h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="fab fa-google fs-1 text-primary me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Google Cloud Certified</h6>
+                                <p class="text-muted small mb-0">Generative AI Leader</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cert 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card cert-card bg-light border-0 h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="fab fa-python fs-1 text-warning me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Complete Python Developer</h6>
+                                <p class="text-muted small mb-0">Udemy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cert 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card cert-card bg-light border-0 h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="fas fa-network-wired fs-1 text-info me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">IntelliCon 2025</h6>
+                                <p class="text-muted small mb-0">National Conference on AI/ML</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cert 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card cert-card bg-light border-0 h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="fas fa-laptop-code fs-1 text-success me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Front End Development</h6>
+                                <p class="text-muted small mb-0">Infosys Springboard</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cert 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card cert-card bg-light border-0 h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="fas fa-user-tie fs-1 text-secondary me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Career Edge - Professional</h6>
+                                <p class="text-muted small mb-0">TCS iON</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cert 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card cert-card bg-light border-0 h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="fas fa-microphone-alt fs-1 text-danger me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Communication Skills</h6>
+                                <p class="text-muted small mb-0">Udemy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact Section -->
+    <footer id="contact" class="pt-5 pb-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <h3 class="fw-bold mb-2">PRAVEEN</h3>
+                    <p class="text-muted mb-0">Assistant Professor Candidate | Jodhpur, Rajasthan</p>
+                </div>
+                
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="mailto:it.praveen369@gmail.com" class="fs-3 me-4" title="Email Me"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/praveen-tak" target="_blank" class="fs-3 me-4" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Praveen152025" target="_blank" class="fs-3" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4 mb-4">
+            <div class="row">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">&copy; 2026 PRAVEEN. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS to collapse mobile menu on click -->
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const menuToggle = document.getElementById('navbarNav');
+        const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+        
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => {
+                if (menuToggle.classList.contains('show')) {
+                    bsCollapse.toggle();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
